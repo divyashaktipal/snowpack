@@ -22,7 +22,7 @@ jobs:
           mkdir .vercel
           cd .vercel
           touch project.json
-          echo '{\"projectId\":\$VERCEL_PROJECT_ID\",\"orgId\":\"$VERCEL_ORG_ID\"}' > project.json
+          echo '{"projectId":"prj_Fvxakj6xnmL7MbHfsPMhUKGXtEog","orgId":"team_N9R141dNqVCtAdVEU52DtAWx"}' > project.json
       - name: Deploying the project
         run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes # Use secure token from secrets
       - name: Setup finish
