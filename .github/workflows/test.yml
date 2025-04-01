@@ -15,10 +15,13 @@ jobs:
         run: yarn install # install node modules using yarn
       - name: Build the project
         run: yarn build
+      - name: Sets the vercel env
+        run: |
+          cd build
+          mkdir .vercel
+          touch project.json
+          echo '{"projectId":"prj_Fvxakj6xnmL7MbHfsPMhUKGXtEog","orgId":"team_N9R141dNqVCtAdVEU52DtAWx"}' > project.json
       - name: Deploying the project
-        env:
-          VERCEL_ORG_ID: team_N9R141dNqVCtAdVEU52DtAWx
-          VERCEL_PROJECT_ID: prj_Fvxakj6xnmL7MbHfsPMhUKGXtEog
         run: yarn deploy
       - name: Setup finish
         run: echo "Setup finished, hurrey!"
