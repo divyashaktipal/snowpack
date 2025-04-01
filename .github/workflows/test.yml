@@ -1,0 +1,15 @@
+name: My first Github Action
+on: [push]
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # checkout@v2 is the latest version of the checkout action
+      # - run: tree # list the files in the current directory
+      - uses: actions/setup-node@v2 # setup-node@v2 is the latest version of the setup-node action
+        with:
+          node-version: '18' # use Node.js 18
+      # - run: node -v # print the version of Node.js
+      # you can also change the name of run to something more descriptive i.e. name:
+      - name: Build the project
+
