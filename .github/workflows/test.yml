@@ -20,7 +20,7 @@ jobs:
           cd build
           mkdir .vercel
           cd .vercel
-          t ouch project.json
+          touch project.json
           echo '{"projectId":"prj_Fvxakj6xnmL7MbHfsPMhUKGXtEog","orgId":"team_N9R141dNqVCtAdVEU52DtAWx"}' > project.json
       - name: Deploying to Vercel
         run: vercel --prod --token=DbXtbYDdLYM9NL20fHIACePj
