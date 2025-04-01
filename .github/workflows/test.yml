@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install node_modules
-        run: yarn install # Install dependencies
+        run: npm install # Install dependencies
       - name: Install Vercel CLI
         run: npm install -g vercel # Install Vercel CLI globally
       - name: Build the project
