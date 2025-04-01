@@ -12,4 +12,8 @@ jobs:
       # - run: node -v # print the version of Node.js
       # you can also change the name of run to something more descriptive i.e. name:
       - name: Build the project
+        run: yarn build
+      - name: Setup finish
+        run: echo "Setup finished, hurrey!"
+
 
