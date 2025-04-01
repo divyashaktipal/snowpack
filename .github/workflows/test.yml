@@ -11,6 +11,8 @@ jobs:
           node-version: '18' # use Node.js 18
       # - run: node -v # print the version of Node.js
       # you can also change the name of run to something more descriptive i.e. name:
+      - name: Install node_modules
+        run: yarn install # install node modules using yarn
       - name: Build the project
         run: yarn build
       - name: Setup finish
